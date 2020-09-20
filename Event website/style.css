@@ -1,0 +1,301 @@
+
+:root{
+	--primary: #3DCFD3;
+	--dark:#161616;
+	--pure:#FFFFFF;
+	--ternary:#898989;
+	--light:#F2F2F2;
+	--secondary:#070606;
+}
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;;
+	-webkit-font-smoothing:antialiased;
+}
+html{
+	scroll-behavior: smooth;
+}
+body{
+	margin:0;
+}
+.blinking{
+    animation:blinkingText 1.5s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: white;    }
+    49%{    color: yellow; }
+    60%{    color: red; }
+    99%{    color:blue;  }
+    100%{   color: pink;    }
+}
+
+.announcement .blinking{
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 5rem;
+	color: red;
+	font-weight: 1000;
+	opacity: 1;
+}
+section{
+	width: 100%;
+	height: 100vh;
+	background:url("images/title.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: fixed;
+}
+/*section .main{
+	height: 2000px;
+}*/
+section .title{
+	width: 100%;
+	height: 100%;
+	float: left;
+	 padding:50px;
+	box-sizing: border-box;
+
+}
+
+section .title .announcement{
+	color: red;
+	background:rgba(255,255,0,0.3);
+	transition: .5s;
+	border: 10px double green;
+}
+section .title .announcement:hover{
+	background: #C3FF80;
+}
+section .title .announcement h1{
+   margin: 0;
+   padding: 0;
+   font-size: 50px;
+   text-transform:uppercase;
+}
+section .title .announcement p{
+	margin: 10px 0 0;
+	padding:0;
+	margin-left: 1rem;
+	font-size: 2rem;
+	color: #E41B17;
+	background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.9));
+	font-weight: 100;
+	margin-bottom: 2rem;
+
+}
+section .title .announcement p span{
+	color: #FFFDD0;
+}
+section .title .announcement p a{
+	text-decoration: none;
+	color: #FFFDD0;
+}
+section .about{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,0.5);
+	float:right;
+	box-sizing: border-box;
+}
+section .about ul{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-left: 0;
+	padding: 40px;
+	box-sizing: border-box;
+
+}
+
+section .about ul li{
+	list-style: none;
+	background: rgba(255,255,0,0.3);
+	box-sizing: border-box;
+	height: 200px;
+	margin: 15px 0;
+}
+section .about ul li .schedule{
+	position: relative;
+	padding: 20px;
+	background: #80FF84;
+	opacity: 0.5;
+	box-sizing: border-box;
+	width: 30%;
+	height: 100%;
+	float: left;
+	text-align: center;transition: .5s;
+}
+section .about ul li:hover .schedule{
+	background: #C8E6C9;
+}
+section .about ul li .schedule h2{
+	position: absolute;
+	margin:0;
+	padding: 0;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	color: black;
+	font-size: 40px;
+	font-weight: 800;
+
+}
+section .about ul li .schedule h2 span{
+	font-size: 30px;
+}
+section .about ul li .detail{
+	padding: 20px;
+	box-sizing: border-box;
+	width: 70%;
+	height: 100%;
+	float: left ;
+}
+section .about ul li .detail:hover{
+	background-color: #2E7D32;
+}
+section .about ul li .detail p{
+	position: relative;
+	margin: 10px 0 0;
+	padding: 0;
+	font-size: 22px;
+}
+section .about ul li .detail a{
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 10px 15px;
+	border: 2px solid black;
+	margin-top: 15px;
+	font-size: 18px;
+	transition: .5s;
+	float: right;
+
+}
+section .about ul li .detail a:hover{
+	background: #80FF84;
+	opacity: 0.7;
+}
+section.class1 {
+	margin:2rem;
+			width:100%;
+			border:1px solid #fff;
+			height:200px;
+			overflow: auto;
+			text-align:left;
+			padding:10px; 
+                                   
+}
+.class2{
+	        color: red;
+			text-align: center;
+			position: relative;
+			padding: 10px;
+			padding-left: 5px;
+			border: 5px double green;
+                                   animation: myfirst 5s linear 2s infinite alternate;
+                                   animation-name: example;
+                                   animation-duration: 5s;
+                                   animation-timing-function: linear;
+                                   animation-delay: 2s;
+                                   animation-iteration-count: infinite;
+                                   animation-direction: alternate;
+		}
+		@keyframes example {
+  0%   { left:0px; top:0px;}
+  25%  { left:200px; top:0px;}
+  /*50%  { left:200px; top:200px;}
+  75%  { left:0px; top:200px;}*/
+  100% { left:0px; top:0px;}
+}
+.class2:hover{
+	background-color: #fff;
+
+	
+}
+/*section.registration{
+	margin-top: 6rem;
+}*/
+footer{
+	background:var(--dark);
+	text-align: center;
+	padding-right: 5rem 0;
+}
+footer .footer-logo{
+	margin-bottom: 3rem;
+	margin-top: 3rem;	
+}
+footer .footer-socials{
+	margin-bottom: 2rem;
+}
+footer .copyright{
+	color: var(--ternary);
+	margin-bottom: 2rem;
+}
+footer h1{
+	color: var(--pure);
+}
+@media(max-width:999px){
+	section{
+		height: 100%;
+		background-position: center;
+	}
+	section .title{
+		width: 100%;
+		height: auto;
+		float: none;
+		padding: 20px;
+	}
+	section .about{
+		width: 100%;
+		height: auto;
+		background: transparent;
+		float: none;
+	}
+	section .title .announcement{
+		padding: 20px;
+	}
+	section .title .announcement h1{
+		font-size: 30px;
+	}
+	section .about ul{
+		position:relative;
+		transform:translateY(0px);
+		padding: 0 20px 20px;
+	}
+	section .about ul li{
+		height: auto;
+
+	}
+/*	section .about ul li .schedule{
+		width: 80px;
+		height: 80px;
+		padding: 0;
+	}*/
+	/*section .about ul li .schedule h2{
+		font-size: 30px;
+		line-height: 24px;
+	} */
+	section .about ul li .detail{
+		width: 100%;
+		float: none;
+		padding-left: 100px;
+		background: transparent;
+	}
+	section .about ul li .detail a{
+		padding: 5px 10px;
+	}
+	section .about ul li .schedule h2{
+		font-size: 15px;
+		margin-left: 0.2rem;
+	}
+	section .about ul li .schedule img{
+		height: 50px;
+		width: 50px;
+	}
+	section .about ul li .schedule{
+		height: 100%;
+	}
+
+}
